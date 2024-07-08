@@ -1,0 +1,165 @@
+body {
+    background-image: url('https://cdn.dribbble.com/userupload/15464992/file/original-0c9f45f99eeda4fc2f35fe33ab544d5e.jpeg?resize=1504x1855');
+    background-size: cover;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: aliceblue;
+    text-decoration: underline;
+}
+ .ok {
+    opacity: 60%;
+ }
+ h1 {
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    margin-top: 50px;
+ }
+nav {
+    display: flex;
+    gap: 20px;
+    order: 1;
+    flex: 1;
+    justify-content: center;
+} 
+ .Phoenix {
+    color: aliceblue;
+    text-decoration: none;
+ }
+
+nav a {
+    color: aliceblue;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a.active {
+    color: lightgray; /* Couleur différente pour le lien actif */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: aliceblue;
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background: aliceblue;
+}
+
+.images {
+    display: flex;
+    gap: 10px;
+    order: 2;
+}
+
+.images a img {
+    margin: 10px;
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+}
+
+h2 {
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact a img {
+    margin: 10px;
+    width: 50px; /* Taille uniforme pour les images */
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+button {
+    display: block;
+    margin: 30px auto; /* Centré horizontalement */
+    padding: 15px 30px;
+    background-color: #3e5020; /* Couleur kaki */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    display: block;
+    margin: 30px auto; /* Centré horizontalement */
+    padding: 25px 40px;
+    background-color: #9dff00; /* Couleur kaki */
+    color: white;
+    border: aliceblue;
+    border-radius: 20px;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.contact a img:hover {
+    transform: scale(1.2); /* Agrandissement au survol */
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        order: 2;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .images {
+        order: 3;
+    }
+
+    .logo {
+        order: 1;
+        margin-bottom: 10px;
+    }
+}

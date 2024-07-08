@@ -1,0 +1,134 @@
+body {
+    background-image: url('https://cdn.dribbble.com/userupload/15451238/file/original-4ecefc85133370324db36ebe664f3312.png?resize=1504x1128');
+    background-size: cover;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: aliceblue;
+    text-decoration: underline;
+}
+ .ok {
+    opacity: 60%;
+ }
+
+nav {
+    display: flex;
+    gap: 20px;
+    order: 1;
+    flex: 1;
+    justify-content: center;
+}
+
+nav a {
+    color: aliceblue;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a.active {
+    color: lightgray; /* Couleur différente pour le lien actif */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: aliceblue;
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background: aliceblue;
+}
+
+.images {
+    display: flex;
+    gap: 10px;
+    order: 2;
+}
+
+.images a img {
+    margin: 10px;
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+}
+.container {
+    position: relative;
+    right: -35%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garantit que la largeur inclut le padding */
+}
+
+input[type="submit"] {
+    background-color: #556B2F;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #405920;
+}

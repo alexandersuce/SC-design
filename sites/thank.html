@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci !</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #29282D;
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+        }
+        .loader {
+            display: none;
+            text-align: center;
+            margin: 20px;
+        }
+        .message {
+            display: none;
+            margin-bottom: 20px;
+        }
+        .icon-valid {
+            width: 180px;
+            height: 180px;
+            background-image: url('icon.png');
+            background-size: cover;
+            margin: 0 auto 10px;
+        }
+        .message p {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .button {
+            background-color: #a0a1a2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <p>Message en cours d'envoi...</p>
+        <img src="loader.gif" alt="Loading...">
+    </div>
+    <div class="message" id="message">
+        <div class="icon-valid"></div>
+        <p>Merci de votre message ! Je vous répondrai dès que possible. À bientôt :)</p>
+    </div>
+    <a href="index.html" class="button">Retourner à l'accueil</a>
+
+    <script>
+        // Simuler l'envoi du message
+        setTimeout(function() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        }, 3000); // temps simulé de 3 secondes pour l'envoi
+    </script>
+</body>
+</html>
